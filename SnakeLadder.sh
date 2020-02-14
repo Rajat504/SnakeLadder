@@ -1,2 +1,2 @@
-#!/bin/sh
-echo "Welcome to SnakeLadder Game"
+#UC1
+Position=0
