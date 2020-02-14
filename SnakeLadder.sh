@@ -41,3 +41,6 @@ declare -A arr
 				done
 }
 board
+=======
+#UC1
+Position=0
