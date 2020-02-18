@@ -1,2 +1,9 @@
-#!/bin/sh
-echo "Welcome to SnakeLadder Game"
+GetRandom()
+{
+n=$(((($RANDOM%6))+1))
+return $n
+}
+GetRandom
+res=$?
+echo "$res"
+
