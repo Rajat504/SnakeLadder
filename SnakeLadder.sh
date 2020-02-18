@@ -41,6 +41,15 @@ declare -A arr
 				done
 }
 board
-=======
 #UC1
 Position=0
+
+#UC2
+GetRandom()
+{
+n=$(((($RANDOM%6))+1))
+return $n
+}
+GetRandom
+res=$?
+echo "$res"
