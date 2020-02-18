@@ -116,6 +116,7 @@ then
 elif(($n==2))
 then
 	echo "snake is present - "$Player1
+#UC6
 #UC5
 Player1=0
 dice=0
@@ -148,6 +149,7 @@ then
 			Player1=$(($Player1-$dice))
 		else
 			Player1=0
+
 		fi
 fi
 }
@@ -163,5 +165,14 @@ done
 echo "Postion of Player1 is - "$Player1
 	echo "$Player"
 	echo "Player Wins at position - "$Player1 
-
-
+fi
+fi
+}
+while(($Player1<100))
+do
+dicecount=$((dicecount+1))
+GetRandom
+check
+done
+echo "No.of times diceRolled: $dicecount"
+echo "Player Wins at Position -" $Player1
