@@ -116,6 +116,33 @@ then
 elif(($n==2))
 then
 	echo "snake is present - "$Player1
+#UC5
+Player1=0
+dice=0
+GetRandom()
+{
+dice=$(($((RANDOM%6))+1))
+}
+check()
+{
+n=$(($RANDOM%3))
+	if(($n==0))
+then
+	echo "Player dont want to move -" $Player1
+	elif(($n==1))
+then
+	echo "Ladder is present -" $Player1
+	Player1=$((Player1+dice))
+	if(($Player1==100))
+	then
+		return
+	elif(($Player1>100))
+	then
+		Player1=$(($Player1-$dice))
+	fi
+	elif(($n==2))
+	then
+		echo "Snake is present -" $Player1
 		if(($Player1>=$dice))
 		then
 			Player1=$(($Player1-$dice))
@@ -125,8 +152,16 @@ then
 fi
 }
 while(($Player1<100))
+fi
+fi
+}
+	while(($Player1<100))
 do
 GetRandom
 check
 done
 echo "Postion of Player1 is - "$Player1
+	echo "$Player"
+	echo "Player Wins at position - "$Player1 
+
+
