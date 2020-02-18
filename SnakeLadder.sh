@@ -50,11 +50,6 @@ GetRandom()
 n=$(((($RANDOM%6))+1))
 return $n
 }
-<<<<<<< HEAD
-GetRandom
-res=$?
-echo "$res"
-=======
 Check()
 {
 GetRandom
@@ -97,4 +92,4 @@ if(($Player1+$res<100))
 }
 Check
 pos=$?
-echo "player is at position"$pos
+echo "player is at position "$pos
